@@ -1,0 +1,75 @@
+ .bg-primary {
+  background-color: #737373;
+}
+ .bg-primary-light {
+  background-color: #d1d5db;
+}
+ .text-primary {
+  color: #404040;
+}
+ .border-primary {
+  border-color: #737373;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.shadow {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+ .hover\:bg-primary-light:hover {
+  background-color: #d1d5db;
+}
+.hover\:text-white:hover {
+  color: #171717;
+}
+.transition {
+  transition: all 0.2s;
+}
+.font-bold {
+  font-weight: bold;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.p-3 {
+  padding: 0.75rem;
+}
+.p-6 {
+  padding: 1.5rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-md {
+  max-width: 28rem;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .max-w-md {
+    max-width: 36rem;
+  }
+}

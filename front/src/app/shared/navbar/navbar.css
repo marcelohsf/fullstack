@@ -1,0 +1,47 @@
+ .bg-primary {
+  background-color: #737373;
+}
+ .hover\:bg-primary-light:hover {
+  background-color: #d1d5db;
+}
+.text-white {
+  color: #171717;
+}
+.font-bold {
+  font-weight: bold;
+}
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.p-4 {
+  padding: 1rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.w-full {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.md\:hidden {
+  display: block;
+}
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+}

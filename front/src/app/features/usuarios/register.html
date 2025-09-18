@@ -1,0 +1,16 @@
+<div class="min-h-screen flex flex-col items-center justify-center bg-neutral-light p-4">
+  <div *ngIf="!isLoggedIn()" class="w-full max-w-md bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4 rounded">
+    <b>Atenção:</b> Você precisa estar logado para cadastrar um novo usuário.
+  </div>
+  <form class="w-full max-w-md bg-white rounded-lg shadow p-6 flex flex-col gap-4" (ngSubmit)="onSubmit()" autocomplete="off">
+    <h1 class="text-2xl font-bold text-primary mb-2 text-center">Criar Conta</h1>
+    <input class="border border-neutral-dark rounded p-3" type="text" placeholder="Nome completo" [(ngModel)]="nome" name="nome" required>
+    <input class="border border-neutral-dark rounded p-3" type="email" placeholder="E-mail" [(ngModel)]="email" name="email" required>
+    <input class="border border-neutral-dark rounded p-3" type="text" placeholder="CPF" [(ngModel)]="cpf" name="cpf" required>
+    <input class="border border-neutral-dark rounded p-3" type="password" placeholder="Senha" [(ngModel)]="senha" name="senha" required>
+  <button class="w-full bg-primary text-white py-3 rounded-lg font-bold text-lg shadow hover:bg-primary-light transition" type="submit" [disabled]="loading">{{ loading ? 'Registrando...' : 'Cadastrar-se' }}</button>
+    <button class="w-full bg-white text-primary border border-primary py-3 rounded-lg font-bold text-lg shadow hover:bg-primary-light hover:text-white transition" type="button" (click)="router.navigate(['/login'])">Já tenho conta</button>
+    <div *ngIf="error" class="text-red-600 text-center">{{ error }}</div>
+    <div *ngIf="success" class="text-green-600 text-center">Usuário cadastrado com sucesso! Redirecionando...</div>
+  </form>
+</div>

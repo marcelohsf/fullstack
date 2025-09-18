@@ -1,0 +1,10 @@
+<div class="min-h-screen flex flex-col items-center justify-center bg-neutral-light p-4">
+  <form class="w-full max-w-md bg-white rounded-lg shadow p-6 flex flex-col gap-4" (ngSubmit)="onSubmit()" autocomplete="off">
+    <h1 class="text-2xl font-bold text-primary mb-2 text-center">Entrar</h1>
+    <input class="border border-neutral-dark rounded p-3" type="text" placeholder="E-mail ou usuário" [(ngModel)]="login" name="login" required>
+    <input class="border border-neutral-dark rounded p-3" type="password" placeholder="Senha" [(ngModel)]="password" name="password" required>
+    <button class="w-full bg-primary text-white py-3 rounded-lg font-bold text-lg shadow hover:bg-primary-light transition" type="submit" [disabled]="loading">{{ loading ? 'Entrando...' : 'Entrar' }}</button>
+    <button class="w-full bg-white text-primary border border-primary py-3 rounded-lg font-bold text-lg shadow hover:bg-primary-light hover:text-white transition" type="button" (click)="router.navigate(['/register'])">Criar conta</button>
+    <div *ngIf="error" class="text-red-600 text-center">{{ error }}</div>
+  </form>
+</div>
